@@ -2,7 +2,11 @@ package com.test;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.spi.ExchangeFormatter;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
+@Component(value = "logFormatter")
+@Scope(value = "prototype")
 public class MyExchangeFormatter implements ExchangeFormatter {
 
 	private static final String SEPARATOR = "|";
